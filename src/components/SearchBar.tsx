@@ -22,18 +22,18 @@ export function SearchBar({ defaultValue = '', placeholder, large = false }: Sea
 
   return (
     <form onSubmit={handleSubmit} className="w-full">
-      <div className={`relative ${large ? 'max-w-2xl' : 'max-w-xl'}`}>
-        <Search className={`absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 rtl:left-auto rtl:right-4 ${large ? 'w-5 h-5' : 'w-4 h-4'}`} />
+      <div className={`relative ${large ? 'max-w-3xl' : 'max-w-xl'}`}>
+        <Search className={`absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 rtl:left-auto rtl:right-4 ${large ? 'w-5 h-5' : 'w-4 h-4'}`} />
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={ph}
-          className={`w-full ${large ? 'pl-12 pr-32 py-4 text-base rtl:pr-12 rtl:pl-32' : 'pl-10 pr-24 py-2.5 text-sm rtl:pr-10 rtl:pl-24'} rounded-xl border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent shadow-sm transition-all`}
+          className={`w-full ${large ? 'pl-14 pr-36 py-4 text-base rtl:pr-14 rtl:pl-36' : 'pl-10 pr-28 py-2.5 text-sm rtl:pr-10 rtl:pl-28'} rounded-xl border-2 border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent shadow-lg transition-all`}
         />
         <button
           type="submit"
-          className={`absolute right-2 top-1/2 -translate-y-1/2 rtl:right-auto rtl:left-2 ${large ? 'px-5 py-2.5 text-sm' : 'px-4 py-1.5 text-xs'} btn-primary`}
+          className={`absolute right-2 top-1/2 -translate-y-1/2 rtl:right-auto rtl:left-2 ${large ? 'px-6 py-2.5 text-sm' : 'px-4 py-1.5 text-xs'} btn-accent rounded-lg`}
         >
           {t('nav.search')}
         </button>
